@@ -87,16 +87,6 @@ function openModal() {
     document.body.style.overflow = "hidden";
     document.body.style.paddingRight = `${scrollbarWidth}px`;
 
-    // Modal boşluğa tıklandığında kapatma işlemi
-    const closeModalOnClick = (event) => {
-        if (event.target === modal) {
-            closeModal();
-            modal.removeEventListener("click", closeModalOnClick); // Kapatırken event listener'ı kaldır
-        }
-    };
-    
-    modal.addEventListener("click", closeModalOnClick);
-
     updateImageCounter(); // Resim sayısını güncelle
 }
 
